@@ -1,3 +1,17 @@
+# Build cbioportal image
+
+Copy the application.properties file to the root of the repository:
+```shell
+cp src/main/resources/application.properties.EXAMPLE src/main/resources/application.properties
+```
+
+Run from the root of the repository:
+```shell
+docker build -t cbioportal-galaxy-button -f docker/web-and-data/Dockerfile .
+```
+
+----
+
 # cBioPortal
 
 The cBioPortal for Cancer Genomics provides visualization, analysis, and download of large-scale cancer genomics data sets. For a short intro on cBioPortal, see [these introductory slides](https://docs.google.com/presentation/d/1hm0G77UklZnpQfFvywBfW2ZIsy8deKi5r1RfJarOPLg/edit?usp=sharing).

@@ -129,6 +129,7 @@
             "vaf.sequential_mode.default",
             "vaf.log_scale.default",
             "download_custom_buttons_json",
+            "export_service_url",
         };
 
 

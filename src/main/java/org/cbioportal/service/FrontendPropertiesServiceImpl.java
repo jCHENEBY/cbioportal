@@ -189,7 +189,9 @@ public class FrontendPropertiesServiceImpl implements FrontendPropertiesService 
         skin_right_nav_show_web_tours("skin.right_nav.show_web_tours", "false"),
 
         download_custom_buttons_json("download_custom_buttons_json", null),
-      
+
+        export_server_url("export_server_url", "http://localhost:3001/export-to-galaxy"),
+
         enable_study_tags("enable_study_tags", null),
         enable_darwin("enable_darwin", null);
 
