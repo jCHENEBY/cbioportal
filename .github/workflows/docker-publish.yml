@@ -9,7 +9,6 @@ on:
   release:
     types: [published]
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,7 +22,12 @@ jobs:
 
     - name: Extract tag version
       id: extract_tag
-      run: echo "TAG_VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+      run: |
+        if [[ $GITHUB_REF == refs/tags/* ]]; then
+          echo "TAG_VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+        else
+          echo "TAG_VERSION=latest" >> $GITHUB_ENV
+        fi
 
     - name: Set lowercase repository owner
       id: set_lowercase_owner
