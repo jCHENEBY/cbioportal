@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - 'v*.*.*'
+  branch:
+    - tmr
   release:
     types: [published]
 
