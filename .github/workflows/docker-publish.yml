@@ -41,7 +41,7 @@ jobs:
     - name: Copy application.properties
       run: cp src/main/resources/application.properties.EXAMPLE src/main/resources/application.properties
 
-    - name: Build and push Docker image
+    - name: Build and push Docker image on GitHub Container Registry
       uses: docker/build-push-action@v4
       with:
         context: .
