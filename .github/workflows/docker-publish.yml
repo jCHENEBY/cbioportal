@@ -49,7 +49,7 @@ jobs:
         context: .
         file: docker/web-and-data/Dockerfile
         push: true
-        platforms: linux/amd64
+        platforms: linux/amd64, linux/arm64
         tags: |
           ghcr.io/${{ env.REPO_OWNER }}/cbioportal-galaxy-button:latest
           ghcr.io/${{ env.REPO_OWNER }}/cbioportal-galaxy-button:${{ env.TAG_VERSION }}
